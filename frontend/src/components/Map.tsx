@@ -37,7 +37,7 @@ function Map() {
                 color: "#385FE9",
               }}
             >
-              Living Room
+              Bedroom #2
             </span>
           </h1>
           <div
@@ -101,7 +101,7 @@ function Map() {
                     marginTop: "-15px",
                   }}
                 >
-                  Location: Living Room
+                  Location: Bedroom #2
                 </Card.Text>
                 <Card.Text
                   style={{

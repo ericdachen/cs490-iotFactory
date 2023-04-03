@@ -28,12 +28,19 @@ def to_json(func):
 # in this case, we use and submit 192.168.0.3 as the IP of the bulb
 
 
+# logs the current data to look at later
+def logResponse(res):
+    with open("output.csv", "wf") as outputfile:
+        outputfile.write(res)
+
+
 @app.route("/get-iot-status", methods=["GET"])
 @to_json
 def getStatusofBulb():
     data = request.form
     addr = data['addr']
     response = getBulbStatus(addr)
+    logResponse(response)
     return response
 
 
@@ -43,4 +50,5 @@ def changeStatusofBulb():
     event = data['status']
     addr = data['addr']
     response = changeLight(event, addr)
+    logResponse(response)
     return response
