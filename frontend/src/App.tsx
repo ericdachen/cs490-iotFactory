@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Map from "./components/Map";
 import DashBoard from "./components/Dashboard";
+import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
@@ -50,6 +51,16 @@ function App() {
         }}
       >
         <DashBoard />
+        <br></br>
+        <br></br>
+        <a href="report.pdf">
+          <div className="d-grid gap-2">
+            <Button size="lg" variant="dark">
+              Generate Usage Report
+            </Button>
+          </div>
+        </a>
+
         <br></br>
         <br></br>
         <br></br>
